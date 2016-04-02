@@ -76,7 +76,7 @@ module Mutant
       #
       # @return [Boolean]
       def success?
-        coverage.eql?(env.config.expected_coverage)
+        coverage >= (env.config.expected_coverage)
       end
       memoize :success?
 
